@@ -1,5 +1,5 @@
-﻿using BulkyWebTest.Data;
-using BulkyWebTest.Models;
+﻿using Bulky.DataAccess.Data;
+using Bulky.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWebTest.Controllers
@@ -32,6 +32,7 @@ namespace BulkyWebTest.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index", "Category"); // View name + controller name
             }
             
@@ -60,6 +61,7 @@ namespace BulkyWebTest.Controllers
             {
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index", "Category"); // View name + controller name
             }
 
@@ -94,7 +96,7 @@ namespace BulkyWebTest.Controllers
             _db.Categories.Remove(obj);
             _db.SaveChanges();
 
-
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index"); // View name + controller name
         }
     }

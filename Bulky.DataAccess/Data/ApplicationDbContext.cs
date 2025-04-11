@@ -1,7 +1,7 @@
-﻿using BulkyWebTest.Models;
+﻿using Bulky.Models.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BulkyWebTest.Data
+namespace Bulky.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext 
     {
