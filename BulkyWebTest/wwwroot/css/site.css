@@ -537,15 +537,3 @@ bg-success {
         background-color: #578553;
         border-color: #578553;
     }
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
